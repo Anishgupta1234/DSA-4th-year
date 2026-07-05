@@ -43,26 +43,26 @@ public class LinkedList {
         System.out.println(" -> NULL");
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        LinkedList list = new LinkedList();
-        System.out.print("Enter number of elements to insert at beginning: ");
-        int n1 = sc.nextInt();
-        System.out.println("Enter " + n1 + " elements:");
-        for (int i = 0; i < n1; i++) {
-            int data = sc.nextInt();
-            list.insertAtBeginning(data);
+        try (Scanner sc = new Scanner(System.in)) {
+            LinkedList list = new LinkedList();
+            System.out.print("Enter number of elements to insert at beginning: ");
+            int n1 = sc.nextInt();
+            System.out.println("Enter " + n1 + " elements:");
+            for (int i = 0; i < n1; i++) {
+                int data = sc.nextInt();
+                list.insertAtBeginning(data);
+            }
+            System.out.println("\nLinked List after Insertion at Beginning:");
+            list.display();
+            System.out.print("\nEnter number of elements to insert at end: ");
+            int n2 = sc.nextInt();
+            System.out.println("Enter " + n2 + " elements:");
+            for (int i = 0; i < n2; i++) {
+                int data = sc.nextInt();
+                list.insertAtEnd(data);
+            }
+            System.out.println("\nLinked List after Insertion at End:");
+            list.display();
         }
-        System.out.println("\nLinked List after Insertion at Beginning:");
-        list.display();
-        System.out.print("\nEnter number of elements to insert at end: ");
-        int n2 = sc.nextInt();
-        System.out.println("Enter " + n2 + " elements:");
-        for (int i = 0; i < n2; i++) {
-            int data = sc.nextInt();
-            list.insertAtEnd(data);
-        }
-        System.out.println("\nLinked List after Insertion at End:");
-        list.display();
-        sc.close();
     }
 }
