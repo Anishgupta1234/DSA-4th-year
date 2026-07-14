@@ -46,9 +46,9 @@ public class StringMethods {
             System.out.print(x + " ");
         System.out.println();
         System.out.println("matches() : " + "12345".matches("\\d+"));
-        String a = new String("Java");
+        String a = "Java";
         String b1 = a.intern();
-        System.out.println("intern() : " + (b1 == "Java"));
+        System.out.println("intern() : " + b1.equals("Java"));
         String s6 = "   Hello   ";
         System.out.println("strip() : '" + s6.strip() + "'");
         System.out.println("stripLeading() : '" + s6.stripLeading() + "'");
